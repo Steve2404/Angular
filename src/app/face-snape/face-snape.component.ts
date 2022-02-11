@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import {FaceSnap} from "../Model/face-snap.model";
 
 @Component({
   selector: 'app-face-snape',
@@ -6,11 +7,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./face-snape.component.scss']
 })
 export class FaceSnapeComponent implements OnInit {
-  title! : string;
-  description!: string;
-  createdDate!: Date;
-  snaps!: number;
-  imageUrl!: string;
+  @Input() faceSnap!: FaceSnap; // On importe notre model genere dans cette Klasse. Il devient injectable depuis le parent
   isSnaps!: boolean;
   boutonText!: string;
 
@@ -18,23 +15,17 @@ export class FaceSnapeComponent implements OnInit {
   constructor() { }
 
   ngOnInit(): void {
-    this.title = "Archibald";
-    this.description = "Mon meilleur ami depuis tout petit !";
-    this.createdDate = new Date();
-    this.snaps = 6;
-    this.imageUrl = "https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg";
-    this.boutonText = "Oh snap !"
+    this.boutonText = "Oh snap !";
     this.isSnaps = true;
-
   }
 
   onChangeSnaps() {
       if(this.isSnaps){
         this.boutonText = "Oops, un Snap!";
         this.isSnaps = false;
-        this.snaps ++;
+        this.faceSnap.snap ++;
       }else{
-          this.snaps -- ;
+          this.faceSnap.snap -- ;
           this.boutonText = "Oh snap !";
           this.isSnaps = true;
       }
