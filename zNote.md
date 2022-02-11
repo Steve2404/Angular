@@ -1,0 +1,1 @@
++ ng generate component face-snap ---> Creation d un Composant
