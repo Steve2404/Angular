@@ -1,8 +1,10 @@
 <div class="face-snap-card">
     <h1>{{faceSnap.title}}</h1>
-    <p>Mise en ligne le {{faceSnap.createDate}}</p>
+    <p>Mise en ligne le {{faceSnap.creationDate}}</p>
     <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
     <p>{{faceSnap.description}}</p>
+<!--    Cette directive permet d ajouter un comportement-->
+    <p *ngIf="faceSnap.location"> Photo prise  a {{faceSnap.location}}</p>
     <p>
         <button (click)="onChangeSnaps()">{{boutonText}}</button>
         👩‍🦰🙄{{faceSnap.snap}}
