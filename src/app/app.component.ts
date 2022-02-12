@@ -14,26 +14,30 @@ export class AppComponent implements OnInit{
 
   //Fonction d initialisation
   ngOnInit() {
-    this.mySnap = new FaceSnap(
-        "Archibald",
-        "Mon meilleur ami depuis tout petit !",
-          new Date(),
-        0,
-        "https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg"
-        );
-    this.mySnap2 = new FaceSnap(
-        "Tulipe-rose",
-        "je dévoile un amour naissant, un sentiment pur et fragile",
-          new Date(),
-          0,
-          "/assets/Images/tulipe-rose.jpg"
-    );
-    this.mySnap3 = new FaceSnap(
-        "Orchidee",
-        "j incarne  la beauté suprême, la splendeur  et la sensualité",
-        new Date(),
-        0,
-        "/assets/Images/Orchidee.jpg"
-    );
+    this.mySnap = {
+      title:"Archibald",
+      description: "Mon meilleur ami depuis tout petit !",
+      creationDate: new Date(),
+      snap: 0,
+      imageUrl: "https://cdn.pixabay.com/photo/2015/05/31/16/03/teddy-bear-792273_1280.jpg",
+      location: "Paris"
+    };
+
+    this.mySnap2 = {
+      title: "Tulipe-rose",
+      description: "je dévoile un amour naissant, un sentiment pur et fragile",
+      creationDate: new Date(),
+      snap: 0,
+      imageUrl:  "/assets/Images/tulipe-rose.jpg",
+      location: "Japon"
+    };
+
+    this.mySnap3 = {
+      title: "Orchidee",
+      description: "j incarne  la beauté suprême, la splendeur  et la sensualité",
+      creationDate: new Date(),
+      snap: 0,
+      imageUrl: "/assets/Images/Orchidee.jpg"
+    }
   }
 }
