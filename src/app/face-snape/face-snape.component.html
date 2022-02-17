@@ -7,6 +7,6 @@
     <p *ngIf="faceSnap.location"> Photo prise  a {{faceSnap.location}}</p>
     <p>
         <button (click)="onChangeSnaps()">{{boutonText}}</button>
-        👩‍🦰🙄{{faceSnap.snap}}
+        <span [ngStyle]="{color: 'rgb(0,'+ faceSnap.snap + ',0)'}">😁🙄{{faceSnap.snap}} </span>
     </p>
 </div>
