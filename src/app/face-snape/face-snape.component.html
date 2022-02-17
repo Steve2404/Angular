@@ -1,5 +1,5 @@
 <div class="face-snap-card" [ngClass]="{snapped: boutonText === 'Oops, un Snap!'}">
-    <h1>{{faceSnap.title}}</h1>
+    <h1>{{faceSnap.title| titlecase}}</h1>  <!--On  fait ici du String interpolation -->
     <p>Mise en ligne le {{faceSnap.creationDate}}</p>
     <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
     <p>{{faceSnap.description}}</p>

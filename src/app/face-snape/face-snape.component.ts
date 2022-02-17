@@ -7,7 +7,7 @@ import {FaceSnap} from "../Model/face-snap.model";
   styleUrls: ['./face-snape.component.scss']
 })
 export class FaceSnapeComponent implements OnInit {
-  @Input() faceSnap!: FaceSnap; // On importe notre model genere dans cette Klasse. Il devient injectable depuis le parent
+  @Input() faceSnap!: FaceSnap; // Propriete: On importe notre model genere dans cette Klasse. Il devient injectable depuis le parent
   isSnaps!: boolean;
   boutonText!: string;
 

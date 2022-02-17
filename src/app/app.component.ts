@@ -22,7 +22,7 @@ export class AppComponent implements OnInit{
         location: "Paris"
       },
       {
-        title: "Tulipe-rose",
+        title: "Tulipe rose",
         description: "je dévoile un amour naissant, un sentiment pur et fragile",
         creationDate: new Date(),
         snap: 5,
