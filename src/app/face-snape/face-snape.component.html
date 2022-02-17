@@ -1,6 +1,6 @@
 <div class="face-snap-card" [ngClass]="{snapped: boutonText === 'Oops, un Snap!'}">
     <h1>{{faceSnap.title| titlecase}}</h1>  <!--On  fait ici du String interpolation -->
-    <p>Mise en ligne le {{faceSnap.creationDate}}</p>
+    <p>Mise en ligne {{faceSnap.creationDate| date: 'le  d, MMM   y, hh:mm:ss'}}</p>
     <img [src]="faceSnap.imageUrl" [alt]="faceSnap.title">
     <p>{{faceSnap.description}}</p>
 <!--    Cette directive permet d ajouter un comportement-->
