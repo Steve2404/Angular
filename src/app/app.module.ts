@@ -7,11 +7,15 @@ import * as de from '@angular/common/locales/de'; // Pour importer l allemand
 
 import { AppComponent } from './app.component';
 import { FaceSnapeComponent } from './face-snape/face-snape.component';
+import { FaceSnapListComponent } from './face-snap-list/face-snap-list.component';
+import { HeaderComponent } from './header/header.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    FaceSnapeComponent
+    FaceSnapeComponent,
+    FaceSnapListComponent,
+    HeaderComponent
   ],
   imports: [
     BrowserModule
